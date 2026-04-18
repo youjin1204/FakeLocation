@@ -31,3 +31,10 @@ jobs:
         with:
           name: fake-location-apk
           path: FakeLocation/app/build/outputs/apk/debug/app-debug.apk
+# 旧版本（会报警告）
+- uses: actions/checkout@v4
+- uses: actions/setup-java@v3
+
+# 升级为兼容新版本的写法
+- uses: actions/checkout@v5
+- uses: actions/setup-java@v4
